@@ -5,9 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.twitter.sdk.android.core.identity.TwitterLoginButton
+    <Button
         android:id="@+id/login_button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="LogIn"/>
 
 </android.support.constraint.ConstraintLayout>
