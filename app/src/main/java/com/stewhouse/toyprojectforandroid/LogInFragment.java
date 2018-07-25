@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,6 +36,9 @@ public class LogInFragment extends Fragment {
                 String token = authToken.token;
                 String secret = authToken.secret;
 
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.fragment, new TimelineFragment());
+                transaction.commit();
                 Log.e("TEST", "LogIn Success: token - " + token + ", secret - " + secret);
             }
 
